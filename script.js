@@ -1,5 +1,5 @@
-const EMAIL_DESTINO = "traynorout@gmail.com";
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxQVhebSayvN0QfVnCdkgEXPXTzFwVWb7tBfJUgkoCg9VrvRy1he_6UgE4HpvJd_sbk/exec";
+const EMAIL_DESTINO = "seuemail@gmail.com";
+const APPS_SCRIPT_URL = "sua-api-google-scripts";
 
 const form = document.querySelector('#registration-form');
 const statusMessage = document.querySelector('#status');
