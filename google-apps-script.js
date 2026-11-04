@@ -1,6 +1,6 @@
-var SPREADSHEET_ID = "1wnu9S1kyA_hCWUTLXKEMOSLjUc4A-2JqFEkMeLNSxlA";
+var SPREADSHEET_ID = "seu_spreadsheet_id";
 var SHEET_NAME = "Inscrições";
-var DESTINATION_EMAIL = "traynorout@gmail.com";
+var DESTINATION_EMAIL = "seuemail@gmail.com";
 
 function doGet() {
   return jsonResponse({
