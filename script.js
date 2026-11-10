@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxQVhebSayvN0QfVnCdkgEXPXTzFwVWb7tBfJUgkoCg9VrvRy1he_6UgE4HpvJd_sbk/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyR6SWSqdHnuZeLV7DBxv1lntXk_InL5XHypDhDMxuFcMNhjW3OyXfSlJ8i_wfi-Ovs/exec";
 
 const form = document.querySelector('#registration-form');
 const statusMessage = document.querySelector('#status');
