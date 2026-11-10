@@ -1,6 +1,6 @@
-var SPREADSHEET_ID = "seu_spreadsheet_id";
-var SHEET_NAME = "Inscrições";
-var DESTINATION_EMAIL = "seuemail@gmail.com";
+var SPREADSHEET_ID = "1wnu9S1kyA_hCWUTLXKEMOSLjUc4A-2JqFEkMeLNSxlA";
+var SHEET_NAME = "LISTA DE PRESENÇA JÚRI SIMULADO";
+var DESTINATION_EMAIL = "vivian.milani@unimep.br";
 
 function doGet() {
   return jsonResponse({
@@ -16,29 +16,22 @@ function doPost(e) {
 
     if (sheet.getLastRow() === 0) {
       sheet.appendRow([
-        "Data/Hora",
         "Nome completo",
-        "RA",
-        "E-mail",
-        "Curso",
-        "Semestre"
+        "Semestre",
+        "Data/Hora"
       ]);
     }
 
     sheet.appendRow([
-      new Date(),
       data.name || "",
-      data.ra || "",
-      data.email || "",
-      data.curso || "",
-      data.semestre || ""
+      data.semestre || "",
+      new Date()
     ]);
 
     MailApp.sendEmail({
       to: DESTINATION_EMAIL,
-      subject: "Nova inscrição - Cidadania e Justiça",
-      body: buildEmailBody(data),
-      replyTo: data.email || undefined
+      subject: "LISTA DE PRESENÇA JÚRI SIMULADO",
+      body: buildEmailBody(data)
     });
 
     return jsonResponse({ ok: true });
@@ -63,9 +56,6 @@ function buildEmailBody(data) {
     "Nova inscrição recebida:",
     "",
     "Nome: " + (data.name || ""),
-    "RA: " + (data.ra || ""),
-    "E-mail: " + (data.email || ""),
-    "Curso: " + (data.curso || ""),
     "Semestre: " + (data.semestre || "")
   ].join("\n");
 }
